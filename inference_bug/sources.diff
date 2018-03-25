@@ -1,0 +1,12 @@
+diff -ur case1/test_flow.js case2/test_flow.js
+--- case1/test_flow.js	2018-03-25 14:07:46.000000000 -0700
++++ case2/test_flow.js	2018-03-25 14:07:54.000000000 -0700
+@@ -8,7 +8,7 @@
+ function test_extract_type() {
+   // define type
+   const PersonFields = s.partialObject({name: s.string, age: s.number, email: s.string});
+-//const ThingFields = s.partialObject({ owner: PersonFields });
++  const ThingFields = s.partialObject({ owner: PersonFields });
+ 
+   // this is how to extract type from a validator
+   type Person = s.ExtractType<typeof PersonFields>;
